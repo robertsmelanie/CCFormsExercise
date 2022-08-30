@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Experience Survey</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Customer Expreience Survey</legend>
+            
+                <!-- Bonus 1 Store number -->
+                <label for="storeNumber">Store Number</label>
+                <select name="storeNumber" id="storeNumber">
+                    <option value="" hidden>Select A Store</option>
+                    <option value="3109">3109</option>
+                    <option value="2421">2421</option>
+                    <option value="5357">5357</option>
+                </select>
+                
+                    <fieldset>
+                        <legend>When You Visited</legend>
+                        <div>
+                        <label for="dateVisited">Date Visited</label>
+                        <!-- Bonus 2 -->
+                        <input type="date" id="dateVisited" name="date" min="2022-01-01" max="2022-12-31">
+                        </div>
+                        <div>
+                            <label for="time">Time</label>
+                            <input type="time" id="time" name="time">
+                        </div>
+
+                    </fieldset>
+                
+                <div>
+                    <label for="fullName">Full Name</label>
+                    <input type="text" placeholder="Name" name="fullName" id="fullName">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" placeholder="Email">
+                </div>
+                
+                    <fieldset>
+                        <legend>How would you rate your level of satisfaction with your visit?</legend>
+                        <div>
+                            <label for="satisfied">Satisfied</label>
+                            <input type="radio" name="rated" id="satisfied">
+
+                        </div>
+                        <!-- Bonus 3 -->
+                        <!-- Add checked to have it selected by default when the page loads -->
+                        <div>
+                            <label for="neitherSatisfied">Neither Satisfied or Dissatisfied</label>
+                            <input type="radio" name="rated" id="neitherSatisfied" checked>
+
+                        </div>
+                        
+                        <div>
+                            <label for="dissatisfied">Dissatisfied</label>
+                            <input type="radio" name="rated" id="dissatisfied">
+
+                        </div>
+                    </fieldset>
+                    <div>
+                        <label for="tellUs">Tell Us About Your Experience</label>
+                    </div>
+                    <div>
+                        <textarea name="tellUs" id="tellUs" cols="20" rows="2"></textarea>
+                      
+                    </div>
+                    <div>
+                        <label for="numberTimes">Times visited in the last month</label>
+                    </div>
+                    <!-- Bonus 4 -->
+                    <!-- Adding min and max attributes to limit the number selection to a specific range -->
+                    <div>
+                        <input type="number" name="numberTimes" id="numberTimes" max="30" min="1">
+                    </div>
+                    <!-- Bonus 5 -->
+                    <!-- Checkbox default checked and required -->
+                    <div>
+                        <input type="checkbox" name="check" id="check" checked required>
+                        <label for="check">Please check the box if you would be willing to be contacted about your experience</label>
+                    </div>
+                    <!-- Bonus 6 -->
+                    <!-- Password required and message given if not meeting requirements -->
+                    <div>
+                        <label for="pass">Password</label>
+                        <input type="password" id="pass" name="pass" pattern=".{5,10}" title="Please enter a password that is 5 to 10 characters in length">
+                    </div>
+                    <div>
+                        <!-- Bonus 7 -->
+                        <!-- A reset input clears out the values entered into a form -->
+                        <input type="reset">
+                        <input type="submit">
+                        
+                    </div>   
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
